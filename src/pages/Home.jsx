@@ -11,6 +11,9 @@ const Home = () => {
       </p>
       <ul>
         <li>
+          <Link to="/desktoptwelve">DesktopTwelve</Link>
+        </li>
+        <li>
           <Link to="/desktopthirteen">DesktopThirteen</Link>
         </li>
         <li>

@@ -8,15 +8,13 @@ const shapes = {
 };
 const variants = {
   fill: {
+    orange_300: "bg-orange-300 text-white-A700",
     yellow_900: "bg-yellow-900 text-white-A700",
     light_blue_900: "bg-light_blue-900 text-white-A700",
     deep_orange_A200: "bg-deep_orange-A200 text-white-A700",
     white_A700: "bg-white-A700 text-black-900",
   },
-  outline: {
-    white_A700: "border border-solid border-white-A700",
-    yellow_900: "border border-solid border-yellow-900",
-  },
+  outline: { white_A700: "border border-solid border-white-A700" },
 };
 const sizes = { xs: "p-2", sm: "p-3", md: "p-[15px]", lg: "p-[18px]" };
 
@@ -50,6 +48,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
   variant: PropTypes.oneOf(["fill", "outline"]),
   color: PropTypes.oneOf([
+    "orange_300",
     "yellow_900",
     "light_blue_900",
     "deep_orange_A200",

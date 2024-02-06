@@ -1,16 +1,37 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
+import { registerDeviceAuth } from "service/api";
+
 import { Button, Img, Line, Text } from "components";
 
 const Frame1131Page = () => {
+  const [register, setRegister] = React.useState();
+  const navigate = useNavigate();
+
+  function loginOne() {
+    const req = { data: { username: "34", password: "3243", email: "134" } };
+
+    registerDeviceAuth(req)
+      .then((res) => {
+        setRegister(res?.data);
+
+        navigate("/desktopthirteen");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-inter items-center justify-start mx-auto w-full">
         <div className="bg-gray-100_01 flex md:flex-col flex-row md:gap-10 gap-[60px] items-center justify-start p-[109px] md:px-10 sm:px-5 w-full">
           <Img
             className="md:flex-1 h-[805px] sm:h-auto md:ml-[0] ml-[41px] object-cover w-[47%] md:w-full"
-            src="images/img_rectangle6846.png"
             alt="rectangle6846"
+            src={register?.status}
           />
           <div className="bg-white-A700 flex md:flex-1 flex-col items-start justify-start p-[39px] md:px-5 rounded-lg w-[43%] md:w-full">
             <div className="flex flex-col gap-11 justify-start mb-[18px] ml-1 md:ml-[0] w-[83%] md:w-full">
@@ -64,7 +85,10 @@ const Frame1131Page = () => {
                   Forgot Password ?
                 </Text>
                 <Button
-                  className="cursor-pointer font-medium leading-[normal] min-w-[112px] md:ml-[0] ml-[138px] mr-[113px] mt-[37px] rounded-sm text-center text-xl"
+                  className="common-pointer cursor-pointer font-medium leading-[normal] min-w-[112px] md:ml-[0] ml-[138px] mr-[113px] mt-[37px] rounded-sm text-center text-xl"
+                  onClick={() => {
+                    loginOne();
+                  }}
                   shape="round"
                   color="yellow_900"
                   size="xs"
