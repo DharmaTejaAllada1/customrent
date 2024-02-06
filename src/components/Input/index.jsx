@@ -6,11 +6,10 @@ const variants = {
   fill: {
     deep_orange_A200: "bg-deep_orange-A200 text-white-A700",
     light_blue_900: "bg-light_blue-900",
+    yellow_900: "bg-yellow-900",
   },
-  outline: { black_900: "border border-black-900 border-solid" },
 };
 const shapes = {
-  square: "rounded-none",
   round: "rounded-bl-none rounded-br-[40px] rounded-tl-none rounded-tr-[40px]",
 };
 const sizes = { xs: "pb-[13px] pt-2.5 px-2.5", sm: "pb-4 pt-5 px-4" };
@@ -29,7 +28,7 @@ const Input = React.forwardRef(
       prefix,
       suffix,
       onChange,
-      shape = "",
+      shape = "round",
       size = "",
       variant = "",
       color = "",
@@ -74,10 +73,10 @@ Input.propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  shape: PropTypes.oneOf(["square", "round"]),
+  shape: PropTypes.oneOf(["round"]),
   size: PropTypes.oneOf(["xs", "sm"]),
-  variant: PropTypes.oneOf(["fill", "outline"]),
-  color: PropTypes.oneOf(["deep_orange_A200", "light_blue_900", "black_900"]),
+  variant: PropTypes.oneOf(["fill"]),
+  color: PropTypes.oneOf(["deep_orange_A200", "light_blue_900", "yellow_900"]),
 };
 
 export { Input };

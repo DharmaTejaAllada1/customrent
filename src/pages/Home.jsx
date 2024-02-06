@@ -11,13 +11,13 @@ const Home = () => {
       </p>
       <ul>
         <li>
-          <Link to="/desktoptwelve">DesktopTwelve</Link>
+          <Link to="/home1">Home1</Link>
         </li>
         <li>
-          <Link to="/desktopthirteen">DesktopThirteen</Link>
+          <Link to="/login">Login</Link>
         </li>
         <li>
-          <Link to="/frame1131">Frame1131</Link>
+          <Link to="/signup">Signup</Link>
         </li>
       </ul>
     </div>

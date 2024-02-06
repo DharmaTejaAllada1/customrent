@@ -9,20 +9,20 @@ const DesktopThirteenImage26 = (props) => {
         <div className="flex flex-col gap-[49px] items-start justify-start md:ml-[0] ml-[726px] mr-[154px]">
           <Text
             className="leading-[31.00px] text-lg text-white-A700 w-[95%] sm:w-full"
-            size="txtPoppinsRegular18"
+            size="txtPoppinsRegular18WhiteA700"
           >
             {props?.descriptiontext}
           </Text>
           <Text
             className="leading-[31.00px] ml-1 md:ml-[0] text-lg text-white-A700 w-full"
-            size="txtPoppinsRegular18"
+            size="txtPoppinsRegular18WhiteA700"
           >
             {props?.descriptiononetext}
           </Text>
         </div>
         <Img
           className="sm:h-auto h-px mt-[643px] object-cover w-full"
-          src="images/img_image26.png"
+          src="defaultNoData.png"
           alt="imagetwentysix"
         />
         <div className="md:h-[1070px] h-px md:ml-[0] ml-[246px] mr-[370px] mt-80 relative w-[58%] md:w-full">
@@ -38,7 +38,7 @@ const DesktopThirteenImage26 = (props) => {
           <div className="absolute flex flex-col md:gap-10 gap-[145px] justify-end right-[1%] top-full w-[83%]">
             <Text
               className="sm:text-[32px] md:text-[38px] text-[42px] text-deep_orange-A200"
-              size="txtInterBold42"
+              size="txtInterBold42DeeporangeA200"
             >
               {props?.solutionsthatfitonetext}
             </Text>

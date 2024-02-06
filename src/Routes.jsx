@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
-const Frame1131 = React.lazy(() => import("pages/Frame1131"));
-const DesktopThirteen = React.lazy(() => import("pages/DesktopThirteen"));
-const DesktopTwelve = React.lazy(() => import("pages/DesktopTwelve"));
+const Signup = React.lazy(() => import("pages/Signup"));
+const Login = React.lazy(() => import("pages/Login"));
+const Home1 = React.lazy(() => import("pages/Home1"));
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<>Loading...</>}>
@@ -12,9 +12,9 @@ const ProjectRoutes = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/desktoptwelve" element={<DesktopTwelve />} />
-          <Route path="/desktopthirteen" element={<DesktopThirteen />} />
-          <Route path="/frame1131" element={<Frame1131 />} />
+          <Route path="/home1" element={<Home1 />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </React.Suspense>

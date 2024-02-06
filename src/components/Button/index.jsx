@@ -2,16 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const shapes = {
-  round: "rounded-[3px]",
   circle: "rounded-[50%]",
+  round: "rounded-[3px]",
   square: "rounded-none",
 };
 const variants = {
   fill: {
-    orange_300: "bg-orange-300 text-white-A700",
-    yellow_900: "bg-yellow-900 text-white-A700",
     light_blue_900: "bg-light_blue-900 text-white-A700",
     deep_orange_A200: "bg-deep_orange-A200 text-white-A700",
+    orange_700: "bg-orange-700 text-white-A700",
+    yellow_900: "bg-yellow-900 text-white-A700",
     white_A700: "bg-white-A700 text-black-900",
   },
   outline: { white_A700: "border border-solid border-white-A700" },
@@ -44,14 +44,14 @@ const Button = ({
 Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  shape: PropTypes.oneOf(["round", "circle", "square"]),
+  shape: PropTypes.oneOf(["circle", "round", "square"]),
   size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
   variant: PropTypes.oneOf(["fill", "outline"]),
   color: PropTypes.oneOf([
-    "orange_300",
-    "yellow_900",
     "light_blue_900",
     "deep_orange_A200",
+    "orange_700",
+    "yellow_900",
     "white_A700",
   ]),
 };
