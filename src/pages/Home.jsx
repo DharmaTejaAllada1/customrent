@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="dhiwise-navigation">
@@ -9,18 +10,8 @@ const Home = () => {
         <a href="https://www.dhiwise.com">Dhiwise</a>. Quickly use below links
         to navigate through all pages.
       </p>
-      <ul>
-        <li>
-          <Link to="/home1">Home1</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/signup">Signup</Link>
-        </li>
-      </ul>
     </div>
   );
 };
+
 export default Home;
